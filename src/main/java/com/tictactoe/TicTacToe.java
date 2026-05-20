@@ -54,7 +54,7 @@ public class TicTacToe {
     public static boolean validateChoice(char[][] board, int row, int col){
         return board[row][col] == ' '; 
     }
-
+    // Displays the current state of the board    
     public static void displayBoard (char[][] board){
         for (int i = 0; i < board.length; i++) {
             System.out.print("| ");  
