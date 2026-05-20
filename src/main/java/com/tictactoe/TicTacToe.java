@@ -50,11 +50,11 @@ public class TicTacToe {
 
         }
     }
-
+    // Validates the player's choice to ensure it's within the bounds of the board and the cell is empty
     public static boolean validateChoice(char[][] board, int row, int col){
         return board[row][col] == ' '; 
     }
-    // Displays the current state of the board    
+    // Displays the current state of the board   
     public static void displayBoard (char[][] board){
         for (int i = 0; i < board.length; i++) {
             System.out.print("| ");  
@@ -66,7 +66,7 @@ public class TicTacToe {
         }
         System.out.println(); 
     }
-
+    // Checks if the current player has won the game
     public static boolean checkWinner(char[][] board, char player) {
         for (int i = 0; i < board.length; i++) {
             if (board[i][0] == player && board[i][1] == player && board[i][2] == player){ 
@@ -86,7 +86,7 @@ public class TicTacToe {
         }
         return false;
     }
-
+    // Checks if the game is a draw (no more empty spaces on the board)
     public static boolean checkDraw(char[][] board) {
         for (int i = 0; i < board.length; i++){
             for (int j = 0; j < board.length; j++){
